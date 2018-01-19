@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from analysis.models import textarea
+from . import rake1
+
 
 
 
@@ -8,7 +10,7 @@ def home(request):
 
 
 def try_it(request):
-    
+    tex=text_area(arg)
     return render(request,"try_it.html")
 
 
