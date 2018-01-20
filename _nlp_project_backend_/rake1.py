@@ -4,7 +4,8 @@ import operator
 debug = False
 test = True
 
-def text_function(text):
+def text_function(tex):
+    text=tex
     return text
 
 
@@ -136,7 +137,7 @@ class Rake(object):
 
 if test:
     
-    text = ""
+    text=""
     print text
     # Split text into sentences
     sentenceList = split_sentences(text)

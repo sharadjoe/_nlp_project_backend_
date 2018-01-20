@@ -1,9 +1,3 @@
-# Implementation of RAKE - Rapid Automtic Keyword Exraction algorithm
-# as described in:
-# Rose, S., D. Engel, N. Cramer, and W. Cowley (2010). 
-# Automatic keyword extraction from indi-vidual documents. 
-# In M. W. Berry and J. Kogan (Eds.), Text Mining: Applications and Theory.unknown: John Wiley and Sons, Ltd.
-
 import re
 import operator
 
@@ -20,7 +14,7 @@ def is_number(s):
         float(s) if '.' in s else int(s)
         return True
     except ValueError:
-        return False
+        return False 
 
 
 def load_stop_words(stop_word_file):

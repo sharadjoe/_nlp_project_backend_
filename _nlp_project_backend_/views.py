@@ -20,3 +20,4 @@ def try1(request):
     return render(request,"try1.html")
 
 
+
