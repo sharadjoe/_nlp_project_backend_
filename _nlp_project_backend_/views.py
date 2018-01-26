@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from analysis.models import textarea
-from . import rake1
 
 
 
