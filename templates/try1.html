@@ -215,19 +215,19 @@
                                                 <!--<div class="col-md-2"><div class="header">Required</div></div>
                                                 <div class="col-md-5"><div class="header">Description</div></div>-->
                                             </div>
-                                    
+{% for e in answer %}    
                                             <div class="row margin-12">
                                                 <div class="col-md-6">
                                                     <div class="cell">
                                                         <div class="propertyname "style="text-align:center;" >
-                                                            CurrencyCode  <span class="mobile-isrequired"></span>
+                                                            {{e.name}}  <span class="mobile-isrequired"></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="cell">
                                                         <div class="type" style="text-align:center;">
-                                                            <code>String</code>
+                                                            <code>{{e.value}}</code>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -246,129 +246,10 @@
                                                     </div>
                                                 </div>-->
                                             </div>
-                                            <div class="row margin-12">
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="propertyname" style="text-align:center;">
-                                                            PriceType  <span class="mobile-isrequired">[Required]</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="type" style="text-align:center;">
-                                                            <code>Int32</code>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--<div class="col-md-2">
-                                                    <div class="cell">
-                                                        <div class="isrequired">
-                                                            Yes
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <div class="cell">
-                                                        <div class="description">
-                                                            The type of price
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                                            </div>
-                                            <div class="row margin-12">
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="propertyname" style="text-align:center;">
-                                                            WarehouseID  <span class="mobile-isrequired">[Required]</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="type" style="text-align:center;">
-                                                            <code>Int32</code>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--<div class="col-md-2">
-                                                    <div class="cell">
-                                                        <div class="isrequired">
-                                                            Yes
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <div class="cell">
-                                                        <div class="description">
-                                                            The unique identifier for the warehouse
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                                            </div>
-                                            <div class="row margin-12">
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="propertyname" style="text-align:center;">
-                                                            ItemCodes
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="type" style="text-align:center;">
-                                                            <code>String[]</code>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--<div class="col-md-2">
-                                                    <div class="cell">
-                                                        <div class="isrequired">
-                                                            <span class="text-muted">No</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <div class="cell">
-                                                        <div class="description">
-                                    
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                                            </div>
-                                            <div class="row margin-12">
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="propertyname" style="text-align:center;">
-                                                            LanguageID
-                                                            <a class="lookuplink" href="javascript:;">
-                                                                <!--<i class="glyphicon glyphicon-search"></i>-->
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="cell">
-                                                        <div class="type" style="text-align:center;">
-                                                            <code>Int32?</code>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--<div class="col-md-2">
-                                                    <div class="cell">
-                                                        <div class="isrequired">
-                                                            <span class="text-muted">No</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <div class="cell">
-                                                        <div class="description">
-                                                            The customer's preferred language ID (ex. 0 (English), 1 (Spanish), etc.)
-                                                        </div>
-                                                    </div>
-                                                </div>-->
-                                            </div>
+                                           
+                                            {% endfor %}
+                                            
+                                            
                                         </div>
                                     </div>
                         </section>

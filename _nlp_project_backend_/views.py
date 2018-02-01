@@ -11,9 +11,10 @@ def try_it(request):
 def verify(request):
     a,keywords = func(request.GET.get("message"))
     temp = ""
+    out = []
     for i in range(0,a):
-        temp += "Element 1 : " + keywords[i][0] + " Element 2 "+ str(keywords[i][1])  + " \n "
-    return render(request,"1.html", {"answer" : temp })
+        out.append({"name" : keywords[i][0] , "value" : keywords[i][1] })
+    return render(request,"try1.html", {"answer" : out })
 
         
         
