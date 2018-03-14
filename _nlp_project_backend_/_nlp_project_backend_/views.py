@@ -34,11 +34,7 @@ def is_number(s):
 
 
 def load_stop_words(stop_word_file):
-    """
-    Utility function to load stop words from a file and return as a list of words
-    @param stop_word_file Path and file name of a file containing stop words.
-    @return list A list of stop words.
-    """
+   
     stop_words = []
     for line in open(stop_word_file):
         if line.strip()[0:1] != "#":
@@ -48,16 +44,11 @@ def load_stop_words(stop_word_file):
 
 
 def separate_words(text, min_word_return_size):
-    """
-    Utility function to return a list of all words that are have a length greater than a specified number of characters.
-    @param text The text that must be split in to words.
-    @param min_word_return_size The minimum no of characters a word must have to be included.
-    """
+ 
     splitter = re.compile('[^a-zA-Z0-9_\\+\\-/]')
     words = []
     for single_word in splitter.split(text):
         current_word = single_word.strip().lower()
-        #leave numbers in phrase, but don't count as words, since they tend to invalidate scores of their phrases
         if len(current_word) > min_word_return_size and current_word != '' and not is_number(current_word):
             words.append(current_word)
     return words
@@ -153,8 +144,7 @@ class Rake(object):
 def func(text):
     # Split text into sentences
     sentenceList = split_sentences(text)
-    #stoppath = "FoxStoplist.txt" #Fox stoplist contains "numbers", so it will not find "natural numbers" like in Table 1.1
-    stoppath = "SmartStoplist.txt"  #SMART stoplist misses some of the lower-scoring keywords in Figure 1.5, which means that the top 1/3 cuts off one of the 4.0 score words in Table 1.1
+    stoppath = "SmartStoplist.txt" 
     stopwordpattern = build_stop_word_regex(stoppath)
 
     # generate candidate keywords
